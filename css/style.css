@@ -1,5 +1,6 @@
 .map {
     border: medium solid #999;
+    margin: 10 px 0 0 20 px;
 }
 
 .countries {
@@ -9,9 +10,45 @@
 }
 
 .states {
-	fill: #006d2c;
 	stroke: #fff;
-	stroke-width: 2px;
+	stroke-width: .5px;
+	stroke-linecap: round;
+}
+
+.chart {
+	float: right;
+    margin: 7px 20px 0 0;
+}
+
+.chartTitle {
+    font-family: serif;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.chartBackground {
+    fill: rgba(128,128,128,.2);
+}
+
+.chartFrame {
+    fill: none;
+    stroke: #999;
+    stroke-width: 3px;
+    shape-rendering: crispEdges;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #999;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: serif;
+    font-size: 0.8em;
+    fill: #999;
 }
 
 .gratLines {
@@ -22,4 +59,10 @@
 
 .gratBackground {
     fill: #c6dbef;
+}
+
+.numbers {
+	fill: grey;
+	font-family: serif;
+	font-size: .8em;
 }
