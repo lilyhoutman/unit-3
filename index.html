@@ -6,6 +6,7 @@
             <title></title>
 
         <!--put your external stylesheet links here-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <!--[if IE<9]>
             <link rel="stylesheet" href="css/style.ie.css">
@@ -17,14 +18,63 @@
     </head>
 
     <body>
-        <!--put your initial page content here-->
-        <!--you can also use this space for internal scripts;
-        place these within <script> tags-->
+        <div class="row">
+            <!--title-->
+            <div class="col-md-8">
+                <div id="title">
+                <h2>Health and the Environment in Germany, 2018</h2>
+            </div>
+        </div>
+        <!--metadata-->
+        <div class="col-md-4">
+            <div id="metadata">
+                <p>Data from German Federal Statistics Portal
+                    <br>
+                Graphics by Lily Houtman</p>
+    </div>
+</div>
+</div>
+    <div class="row">
+        <div class="col-md-6">
+            <!--map-->
+          <div id="map"></div>
+            </div>
+        <div class="col-md-6">
+            <!--chart-->
+            <div id="chart"></div>
+        </div>
+        </div>
+    <div class="row">
+        <div class="col-md-2">
+            <!--data classification-->
+            <div id="classbutton">
+                <b>
+           Reclassify Data
+            </b>
+            <br>
+            <input type="radio" name="button" value="breaks" checked>Natural Breaks<br>
+            <input type="radio" name="button" value="quantile">Quantile<br>
+            <input type="radio" name="button" value="equal">Equal Interval<br></div>
+        </div>
+        <div class="col-md-7">
+            <!--supplementary text-->
+            <div id="information">
+                <p>The interactive graphics above serve two purposes. First, to explore health and environment data by German state. Explore the differences in <em>type of waste</em>, <em>type of renewable energy</em>, and <em>investments in environmental regulations</em>. When changing the attribute, notice that the scale of the chart does not change. A consistent scale makes comparisons between attributes easier, and makes extremely large or small values stand out.</p>
+                <p>Second, use the radio buttons on the bottom left of the page to reclassify data by <em>natural breaks</em> (to emphasize clusters), <em>quantile</em> (to have the same number of data points in each class), and <em>equal interval</em> (to have each class the same size). When changing the class type, it is easy to see that small changes in data classification can have large impacts on the perception of data. Therefore, when presented data, individuals must always be wary of the purpose of the researcher.</p>
 
-        <!--put your external script links here-->
+            </div>
+        </div>
+        <div class="col-md-3">
+            <!--legend-->
+            <div id="legend"></div>
+        </div>
+    </div>
+        <!--external script links-->
         <script type="text/javascript" src="lib/simple-statistics.min.js"></script>
         <script type="text/javascript" src="lib/topojson.min.js"></script>
         <script type="text/javascript" src="lib/d3.min.js"></script>
+        <script type="text/javascript" script src="lib/d3-legend.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+
     </body>
 </html>
